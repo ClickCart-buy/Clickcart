@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClickCart</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+<header>
+<h1>ClickCart</h1>
+<nav>
+<a href="#bakery">Bakery</a>
+<a href="#grocery">Grocery</a>
+<a href="#food">Food</a>
+<a href="#clothes">Clothes</a>
+<a href="#electronics">Electronics</a>
+<a href="#beauty">Beauty</a>
+</nav>
+</header>
+
+<div class="cart" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</div>
+<div class="cart-items" id="cart-items">
+<h3>Shopping Cart</h3>
+<div id="items-list"></div>
+<p>Total: ₹<span id="total-price">0</span></p>
+<button id="checkoutBtn">Checkout</button>
+</div>
+
+<main>
+<section class="container" id="bakery">
+<h2>Bakery</h2>
+<div class="product">
+<img src="images/bakery_bread.jpg" alt="Bread">
+<h3>Fresh Sourdough Bread</h3>
+<p>₹120</p>
+<button onclick="addToCart('Fresh Sourdough Bread',120)">Add to Cart</button>
+</div>
+<div class="product">
+<img src="images/bakery_cake.jpg" alt="Cake">
+<h3>Chocolate Cake</h3>
+<p>₹350</p>
+<button onclick="addToCart('Chocolate Cake',350)">Add to Cart</button>
+</div>
+</section>
+
+<section class="container" id="grocery">
+<h2>Grocery</h2>
+<div class="product">
+<img src="images/grocery_rice.jpg" alt="Rice">
+<h3>Basmati Rice</h3>
+<p>₹400</p>
+<button onclick="addToCart('Basmati Rice',400)">Add to Cart</button>
+</div>
+<div class="product">
+<img src="images/grocery_oil.jpg" alt="Oil">
+<h3>Sunflower Oil</h3>
+<p>₹150</p>
+<button onclick="addToCart('Sunflower Oil',150)">Add to Cart</button>
+</div>
+</section>
+
+<section class="container" id="food">
+<h2>Food</h2>
+<div class="product">
+<img src="images/food_pizza.jpg" alt="Pizza">
+<h3>Cheese Pizza</h3>
+<p>₹250</p>
+<button onclick="addToCart('Cheese Pizza',250)">Add to Cart</button>
+</div>
+</section>
+
+<section class="container" id="clothes">
+<h2>Clothes</h2>
+<div class="product">
+<img src="images/clothes_tshirt.jpg" alt="T-Shirt">
+<h3>Cotton T-Shirt</h3>
+<p>₹500</p>
+<button onclick="addToCart('Cotton T-Shirt',500)">Add to Cart</button>
+</div>
+</section>
+
+<section class="container" id="electronics">
+<h2>Electronics</h2>
+<div class="product">
+<img src="images/electronics_headphones.jpg" alt="Headphones">
+<h3>Wireless Headphones</h3>
+<p>₹1500</p>
+<button onclick="addToCart('Wireless Headphones',1500)">Add to Cart</button>
+</div>
+</section>
+
+<section class="container" id="beauty">
+<h2>Beauty</h2>
+<div class="product">
+<img src="images/beauty_lipstick.jpg" alt="Lipstick">
+<h3>Matte Lipstick</h3>
+<p>₹350</p>
+<button onclick="addToCart('Matte Lipstick',350)">Add to Cart</button>
+</div>
+</section>
+</main>
+
+<div class="footer">
+<p>Contact us: 7708660901 | clickcartshopinngs.buy@gmail.com</p>
+<p>Locations: Namakkal & Tiruppur</p>
+<p>&copy; 2025 ClickCart</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
